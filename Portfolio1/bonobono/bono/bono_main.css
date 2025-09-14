@@ -1,0 +1,195 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
+body,
+section,
+h1,
+button,
+div,
+img,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+body {
+  background: #64c7f3;
+  overflow: hidden;
+  font-family: "Jua", sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  /* display: none; */
+}
+#wrapper > h1 {
+  position: absolute;
+  width: 300px;
+  height: 64px;
+  left: 50%;
+  top: 72px;
+  transform: translateX(-50%);
+  text-indent: -9999px;
+  background: url("img/logo.png") no-repeat;
+  background-size: cover;
+}
+#wrapper > .btn_wrapper {
+  position: absolute;
+  width: 60%;
+  top: 290px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#wrapper > .btn_wrapper > button {
+  background: #fff;
+  color: #000;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  border: 0;
+  box-sizing: border-box;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  position: relative;
+  font-size: 20px;
+  font-family: "Jua", sans-serif;
+}
+#wrapper > .btn_wrapper > button:nth-child(1):after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 72px;
+  background: url("img/faker2.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -72px;
+  right: 20px;
+}
+.main_img {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+}
+.main_img > .main_nur {
+  position: absolute;
+  width: 175px;
+  height: 150px;
+  left: 0;
+  bottom: 0;
+}
+.main_img > .main_poro {
+  position: absolute;
+  width: 115px;
+  height: 77px;
+  right: 15px;
+  bottom: 80px;
+  transform: rotate(10deg);
+}
+.start_info,
+.game_info {
+  /* display: none; */
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+  width: 80%;
+  height: 80%;
+  border: 0;
+  border-radius: 25px;
+}
+.start_info > h2,
+.game_info > h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+.start_info > h2::before {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  left: 5%;
+  top: 15px;
+  background: url("img/rule2.png") no-repeat;
+  background-size: cover;
+}
+.game_info > h2::before {
+  content: "";
+  display: block;
+  width: 82px;
+  height: 75px;
+  position: absolute;
+  left: 5%;
+  top: 15px;
+  background: url("img/faker2_1.png") no-repeat;
+  background-size: cover;
+}
+.cancle {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  top: 25px;
+  right: 25px;
+  text-align: center;
+  line-height: 30px;
+}
+.info_txt {
+  margin-top: 40px;
+  padding: 7%;
+  line-height: 30px;
+}
+.start_info > .start_info_img {
+  position: absolute;
+  width: 145px;
+  height: 115px;
+  bottom: 0;
+  right: 30px;
+}
+.game_info_img1 {
+  position: absolute;
+  width: 103px;
+  height: 87px;
+  bottom: 0;
+  left: 15px;
+}
+.game_info_img2 {
+  position: absolute;
+  width: 112px;
+  height: 162px;
+  bottom: 0;
+  right: 30px;
+}
+.go_area {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+.go_area > .go_start {
+  margin: 0 6%;
+}
+.go_area > .go_start,
+.go_area > .go_story,
+.go_area > .go_info {
+  width: 40%;
+  background: #fff;
+  display: inline-block;
+  height: 40px;
+  border: 0;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 40px;
+}

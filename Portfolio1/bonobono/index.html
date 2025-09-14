@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scale=no"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <title>BonoBono</title>
+    <link rel="stylesheet" href="bono_main.css" />
+    <script>
+      $(function () {
+        $(document).on("touchstart", function () {}); // 아이폰에 터치가 안되는 경우가 있어서
+        $(".start_info").hide();
+        $(".game_info").hide();
+
+        $(".info").on("click", function () {
+          $("#wrapper").hide();
+          $(".game_info").hide();
+          $(".start_info").show();
+        });
+        $(".story").on("click", function () {
+          $("#wrapper").hide();
+          $(".start_info").hide();
+          $(".game_info").show();
+        });
+
+        // function(e){ e.stopPropagation()} 이렇게 해야 이쪽만 선택이 안되게 설정할 수 있음
+        $(".cancle").on("click", function () {
+          $(".game_info").hide();
+          $(".start_info").hide();
+          $("#wrapper").show();
+        });
+        $(".go_story").on("click", function () {
+          $(".start_info").hide();
+          $(".game_info").show();
+          $("#wrapper").hide();
+        });
+        $(".go_info").on("click", function () {
+          $(".game_info").hide();
+          $(".start_info").show();
+          $("#wrapper").hide();
+        });
+
+        $(".start").on("click", function () {
+          window.location.href = "./game/bono_game.html";
+        });
+        $(".go_start").on("click", function () {
+          window.location.href = "./game/bono_game.html";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section id="wrapper">
+      <h1>BonoBono</h1>
+      <div class="btn_wrapper">
+        <!-- <img src="img/bono1.png" alt="" class="main_bono" /> -->
+        <button type="button" class="start">게임 시작</button>
+        <button type="button" class="info">게임 설명</button>
+        <button type="button" class="story">스토리</button>
+      </div>
+      <div class="main_img">
+        <img src="img/nurburi5.png" alt="" class="main_nur" />
+        <img src="img/target1.png" alt="" class="main_poro" />
+      </div>
+    </section>
+    <div class="start_info">
+      <h2>게임 설명</h2>
+      <div class="cancle">X</div>
+      <p class="info_txt">
+        기본 제한시간은 60초 입니다.<br />
+        정상 포로리를 1명 잡을 때 마다 시간이 1초 추가가 되지만 실수로 보노보노,
+        노란 포로리를 잡을 시 1초가 감소됩니다. 연속으로 포로리를 잡으면 왼쪽
+        상단에 조개의 게이지가 채워지는데 포로리를 12마리 연속 잡으면 게이지가
+        꽉 채워지고 게이지가 가득 찼을 시 기본 획득 점수가 2배 증가합니다. 최고
+        점수에 도달해 보세요!
+      </p>
+      <img src="img/rule3.png" alt="" class="start_info_img" />
+      <div class="go_area">
+        <div class="go_start">게임 시작</div>
+        <div class="go_story">스토리</div>
+      </div>
+    </div>
+    <div class="game_info">
+      <h2>스토리</h2>
+      <div class="cancle">X</div>
+      <p class="info_txt">
+        매일 약을 올리며 때릴거야? 라고 도발하는 포로리 때문에 화가 많이 난
+        너부리는 도무지 참지 못해 혼내주기로 마음을 먹었습니다. 이에 순진한
+        보노보노는 어쩔 줄 모르고 말리지도 못하는데 킹받게 하는 포로리를 혼내
+        주고 너부리의 복수를 도와주세요!
+      </p>
+      <img src="img/porori2.png" alt="" class="game_info_img1" />
+      <img src="img/nurburi2.png" alt="" class="game_info_img2" />
+      <div class="go_area">
+        <div class="go_start">게임 시작</div>
+        <div class="go_info">게임 설명</div>
+      </div>
+    </div>
+  </body>
+</html>

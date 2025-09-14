@@ -1,0 +1,393 @@
+@charset "utf-8";
+@import url("./default.css");
+
+/* input number에 화살표 없애기 */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+body {
+  overflow: hidden;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+section {
+  position: relative;
+  width: 360px;
+  max-width: 100%;
+  height: 65vh;
+}
+/* ---------------------------- */
+.main_area {
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+.name_info,
+.playing,
+.calculate {
+  display: none;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+.main_area > h1 {
+  text-align: center;
+  height: 50px;
+  font-size: 24px;
+  line-height: 50px;
+  /* margin-top: 10vh; */
+  margin-bottom: 5vh;
+}
+
+.setting_area {
+  padding: 0 5%;
+  text-align: center;
+}
+.setting_area > p > .sub_txt {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+.people_control {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+#people {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin: 0 15px;
+}
+.add,
+.minus {
+  margin-top: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  text-align: center;
+  background: #dcf;
+  border: 1px solid #888;
+}
+.peo_num {
+  line-height: 40px;
+  /* margin-left: 20px; */
+  position: absolute;
+  right: 20%;
+  transform: translateX(-20%);
+}
+.money_box {
+  margin-bottom: 40px;
+  padding-top: 20px;
+  position: relative;
+  height: 40px;
+}
+.pan {
+  position: absolute;
+  top: 20px;
+  left: 20%;
+  transform: translateX(-20%);
+  line-height: 40px;
+}
+.won {
+  top: 20px;
+  position: absolute;
+  left: 75%;
+  transform: translateX(-75%);
+  line-height: 40px;
+}
+#money {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 30px;
+}
+.money_box > input {
+  text-align: center;
+}
+.money_control {
+  display: flex;
+  justify-content: center;
+}
+.money_btn {
+  width: 60px;
+  height: 30px;
+  background: #fdc;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.clear {
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #222;
+  border-radius: 5px;
+  background: #ddf;
+  margin-left: 20px;
+}
+.submit_btn {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #222;
+  border-radius: 5px;
+  background: #ddf;
+  margin: 40px auto;
+}
+/* ------- 이름 입력 -------- */
+
+#game_start {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  background: #dff;
+  bottom: 10vh;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #dcc;
+  border-radius: 10px;
+}
+.name_pz {
+  text-align: center;
+  font-size: 24px;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 5vh;
+}
+.name_area {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px 0;
+  /* margin-top: 10vh; */
+  margin: 5vh 5% 0;
+}
+.nametag {
+  width: 40%;
+  height: 30px;
+  background: #add;
+  text-indent: 20px;
+  font-size: 16px;
+}
+/* 플레이 화면 */
+.playing {
+  position: relative;
+}
+.playing > h2 {
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 5vh;
+  font-size: 24px;
+}
+.players {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px 0;
+  margin: 5vh 5% 0;
+}
+.box_info {
+  width: 45%;
+  height: auto;
+  background: #bad9fa;
+  padding: 2%;
+}
+.box_info > h4 {
+  text-align: center;
+  height: 25px;
+  line-height: 25px;
+}
+.box_wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.box_one,
+.box_five,
+.box_ten {
+  width: 30%;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  box-sizing: border-box;
+  border: 1px solid rgb(145, 142, 142);
+  border-radius: 10px;
+}
+.money_pan {
+  width: 65%;
+  text-align: center;
+  margin-top: 10px;
+  /* height: 25px; */
+}
+.reset_pan {
+  margin-top: 10px;
+  width: 25%;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  box-sizing: border-box;
+  border: 1px solid rgb(145, 142, 142);
+  border-radius: 10px;
+}
+/* 정산 버튼 */
+.end_control {
+  width: 90%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  margin: 0 5%;
+  bottom: 10vh;
+}
+.end_menu {
+  width: 100%;
+  height: 30px;
+}
+.now_money,
+.again {
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  background: #bad9fa;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+.winner {
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  background: #bad9fa;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+.again_setting {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  background: #dcd;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+.game_over,
+.home {
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  background: #bad9fa;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+/* 승자 선택 */
+.play_bg {
+  display: none;
+}
+.winner_choice {
+  position: absolute;
+  top: -50vh;
+  /* left: 0; */
+  /* transform: translateY(-75%); */
+  margin: 0;
+  width: 100%;
+  height: 280px;
+  background: #99ccff;
+  z-index: 5001;
+  display: none;
+}
+.winner_choice > h2 {
+  text-align: center;
+  font-size: 16px;
+  height: 50px;
+  line-height: 50px;
+}
+.choice_wrap {
+  width: 80%;
+  /* height: 80%; */
+  /* margin: 10%; */
+  padding: 5% 0 0 10%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px 20px;
+}
+.winner_box {
+  text-align: center;
+  width: 45%;
+  height: 70px;
+  line-height: 70px;
+  background: #f2efef;
+}
+.player_cal {
+  margin-top: 3vh;
+}
+.result_box {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  /* margin-left: 4vh; */
+  line-height: 40px;
+}
+.result_box > div:first-child {
+  text-align: center;
+  /* margin: 0 40vh; */
+  width: 100%;
+  /* display: block; */
+}
+.result_box > div {
+  text-align: center;
+  width: 25%;
+}
+.r_m_wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.r_m_wrap > div {
+  width: 25%;
+  text-align: center;
+  font-size: 14px;
+}
+/* .result_money_wrap { */
+/* } */

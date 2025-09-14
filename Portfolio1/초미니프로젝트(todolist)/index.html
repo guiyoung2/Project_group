@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Project</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h2>Todo list</h2>
+        <div class="today">
+          <div id="date"></div>
+          <div id="clock"></div>
+        </div>
+      </header>
+      <div class="text-area">
+        <input
+          type="text"
+          id="addvalue"
+          placeholder="할 일을 추가하세요!"
+          autofocus
+          onkeyup="enterkey(event)"
+        />
+        <button type="button" id="btn" onclick="addTodo()">
+          <i class="xi-plus xi-2x">추가</i>
+        </button>
+      </div>
+      <div class="list-area">
+        <ul id="addtodo" class="todolist">
+          <li><div id="result"></div></li>
+        </ul>
+      </div>
+      <footer>
+        <button type="button" id="clear" onclick="allClearList()">
+          전부 삭제
+        </button>
+      </footer>
+      <script src="./todo.js"></script>
+    </div>
+  </body>
+</html>

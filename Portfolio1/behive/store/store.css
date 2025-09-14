@@ -1,0 +1,192 @@
+@charset "utf-8";
+@import url(../style.css);
+.main_area {
+  margin: 120px 10%;
+  width: 80%;
+  height: auto;
+}
+.store_info {
+  height: 450px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  gap: 20px;
+}
+.kakao_map {
+  width: 50%;
+  height: 400px;
+}
+.main_area {
+  height: auto;
+}
+#map {
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+}
+.txt_info {
+  width: 55%;
+}
+.txt_info h3 {
+  height: 50px;
+  font-size: 24px;
+  line-height: 50px;
+  color: #181818;
+}
+.txt_info p {
+  font-size: 18px;
+  color: #232323;
+}
+.behive {
+  margin-top: 30px;
+}
+.ncnt {
+  margin-top: 30px;
+}
+.lang {
+  display: flex;
+  gap: 10px;
+}
+.lang > li {
+  width: 60px;
+  height: 20px;
+  background: #fdc;
+}
+.lang > li > a {
+  display: block;
+  font-size: 16px;
+  width: 60px;
+  height: 20px;
+  text-align: right;
+}
+.lang > li:first-child {
+  background: url("../image/kr.png") no-repeat left center;
+  background-size: 30px 20px;
+}
+.lang > li:last-child {
+  background: url("../image/en.png") no-repeat left center;
+  background-size: 30px 20px;
+}
+.lang > li:last-child > a {
+  width: 55px;
+}
+.txt_gap {
+  margin-left: 20px;
+}
+.bold {
+  font-weight: bold;
+  font-size: 20px;
+}
+@media screen and (max-width: 1241px) and (min-width: 941px) {
+  .txt_info h3 {
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .txt_info p {
+    font-size: 14px;
+  }
+  .kakao_map {
+    height: 320px;
+  }
+  #map {
+    height: 320px;
+  }
+  .store_info {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 940px) and (min-width: 741px) {
+  .txt_info h3 {
+    height: 30px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .txt_info p {
+    font-size: 11px;
+  }
+  .kakao_map {
+    height: 280px;
+  }
+  #map {
+    height: 280px;
+  }
+  .store_info {
+    height: 320px;
+  }
+  .txt_br {
+    display: block;
+  }
+  .mt {
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 740px) {
+  .main_area {
+    margin-top: 40px;
+  }
+  .txt_info {
+    width: 100%;
+  }
+  .txt_info h3 {
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .txt_info p {
+    font-size: 10px;
+  }
+  .store_info {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .time {
+    width: 100% !important;
+  }
+  .be,
+  .nc {
+    width: 100% !important;
+  }
+  .mobile_d {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .kakao_map {
+    margin-top: 20px;
+    width: 100%;
+    height: 280px;
+  }
+  #map {
+    width: 100%;
+    height: 280px;
+  }
+  .lang > li {
+    width: 40px;
+    height: 15px;
+    background: #fdc;
+  }
+  .lang > li > a {
+    display: block;
+    font-size: 12px;
+    width: 40px;
+    height: 15px;
+    text-align: right;
+  }
+  .lang > li:first-child {
+    background: url("../image/kr.png") no-repeat left center;
+    background-size: 20px 15px;
+  }
+  .lang > li:last-child {
+    background: url("../image/en.png") no-repeat left center;
+    background-size: 20px 15px;
+  }
+  .lang > li:last-child > a {
+    width: 35px;
+  }
+  .behive,
+  .ncnt {
+    margin-top: 15px;
+  }
+}

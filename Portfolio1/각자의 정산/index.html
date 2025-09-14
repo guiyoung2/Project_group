@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scale=no"
+    />
+    <title>각자의 정산</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="default.css" />
+    <script src="./main.js"></script>
+  </head>
+  <body>
+    <div class="contents">
+      <section class="main_area">
+        <h1>각자의 정산</h1>
+        <div class="setting_area">
+          <p>
+            인원수 선택<span class="sub_txt"
+              >( 게임하는 인원수를 입력하세요! )</span
+            >
+          </p>
+          <div class="people_setting">
+            <div class="people_control">
+              <span class="minus" onclick=" down('1')">-</span>
+              <input type="number" id="people" value="1" min="1" max="8" />
+              <span class="add" onclick="up('8')">+</span>
+              <p class="peo_num">명</p>
+            </div>
+          </div>
+          <!-- onclick='count("minus")' -->
+          <div class="money_setting">
+            <div class="money_box">
+              <p class="pan">판돈 :</p>
+              <p class="won">원</p>
+              <input type="number" id="money" value="0" max="5000" />
+            </div>
+            <div class="money_control">
+              <span class="money_btn" id="100" onclick="one('5000')"
+                >100원</span
+              >
+              <span class="money_btn" id="500" onclick="five('5000')"
+                >500원</span
+              >
+              <span class="money_btn" id="1000" onclick="ten('5000')"
+                >1000원</span
+              >
+              <span class="clear" onclick="zero()">초기화</span>
+            </div>
+          </div>
+        </div>
+        <div class="submit_btn" onclick="submit()">입력완료!</div>
+        <!-- 입력안할시 입력하라는 alert 경고 문구 띄우기 -->
+      </section>
+      <!-- 이름 입력하는 섹션 -->
+
+      <section class="name_info">
+        <h2 class="name_pz">이름을 입력하세요!</h2>
+        <div class="name_area"></div>
+        <!-- <div class="players"></div> -->
+        <div value="game_start" id="game_start" onclick="nameValue()">
+          게임시작
+        </div>
+      </section>
+      <!-- 게임 중인 화면 섹션 -->
+
+      <section class="playing">
+        <!-- <h2>게임중</h2> -->
+        <div class="players"></div>
+        <!-- 게임중인 플레이어 이름이 뜨고 탭하는 버튼을 눌러서 사람마다 베팅을 할 수 있게함
+          버튼요소만 있으면 답답할 수 있으니 직접 수정할 수 있게 입력 
+          처음 판돈 설정한 값의 배수만 적을 수 있게 설정 -->
+        <div class="end_control">
+          <div class="now_money">현재 정산</div>
+          <div class="winner">승자 선택</div>
+          <div class="game_over">최종결산</div>
+          <div class="play_bg"></div>
+          <div class="winner_choice">
+            <h2>승자를 선택해주세요!</h2>
+            <div class="choice_wrap"></div>
+          </div>
+        </div>
+        <!-- 현재 까지의 정산 현황을 보여주는 버튼 생성 -->
+        <!-- 한판이 끝날 때 승자를 선택해서 진 사람들은 승자한테 자기가 걸었던 판돈을 지불하게 함수 구현 -->
+        <!-- 게임종료 버튼은 누르면 다음 섹션으로 넘어가 총 정산 화면이 보이게 만듬 -->
+      </section>
+
+      <section class="calculate">
+        <div class="player_cal"></div>
+        <div class="end_menu">
+          <!-- 인원들의 정산 결과를 보여주는 화면 -->
+          <!-- <div class="again">한판 더!</div> -->
+          <!-- 현재 설정했던 인원과 판돈 그대로 다시 실행 -->
+          <div class="again_setting">메인 화면으로</div>
+          <!-- 인원수와 판돈 등 다시 설정하는 화면으로 이동 -->
+          <!-- <div class="home">메인으로</div> -->
+          <!-- 메인화면으로 이동하는건 버튼으로 만들지 그냥 아이콘으로 표현할지 고민중 -->
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

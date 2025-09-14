@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vertical accordian nav</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+         $(document).ready(function(){
+            /*
+                동위요소 선택: selector.next() - 선택개체 바로 뒤(다음) 개체 선택
+                            selector.prev() - 선택개체 바로 앞(이전) 개체 샌택
+            */
+           $('#gnb > ul > li > a').click(function(event){
+                event.preventDefault();
+                if($(this).next().css('display')=='none'){//클릭한 개체 뒤 sub이 보여지고 있지 않다면
+                    $('.sub:visible').slideUp();
+                    //.sub개체들 중 보여지고 있는 상태만 개체는 slideUp을 실행하고
+                    $('#gnb > ul > li > a').removeClass('active');
+                    $(this).next().slideDown();
+                    //클릭된 a 바로 뒤 sub개체는 slideDown이 실행된다
+                    $(this).addClass('active');
+                }else{
+                    $(this).removeClass('active');
+                    $(this).next().slideUp();
+                };         
+           });
+        }); 
+    </script>
+    <style type="text/css">
+        body, nav, div, ul, li {margin: 0; padding: 0;}
+        ul {list-style: none;}
+        a {text-decoration: none; color: #333;}
+        body {font-size: 12px; font-family: "맑은 고딕", sans-serif;}
+        #gnb {
+            width: 200px; height: 450px; border: 1px solid #555;
+            margin: 70px 0px 0px 100px; background: #fff;
+        }
+        #gnb > ul {width: 200px; height: 450px;}
+        #gnb > ul > li {border-bottom: 1px solid #ccc; background: #f4f4f4;}
+        #gnb > ul > li > a {
+            display: block; width: 200px; height: 30px; line-height: 30px;
+            padding-left: 20px; box-sizing: border-box; font-weight: bold;
+        }
+        #gnb .sub {
+            padding: 24px 20px; border-top: 1px solid #ccc; background: #fff;
+            line-height: 1.6em; display: none;
+        }   
+        #gnb ul > li > a.active {
+            background: #235; color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <nav id="gnb">
+        <ul>
+            <li>
+                <a href="#">국내도서</a>
+                <div class="sub">
+                    <ul>
+                        <li><a href="#">베스트셀러</a></li>
+                        <li><a href="#">새로나온책</a></li>
+                        <li><a href="#">추천도서</a></li>
+                        <li><a href="#">특가도서</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">외국도서</a>
+                <div class="sub">
+                    <ul>
+                        <li><a href="#">베스트셀러</a></li>
+                        <li><a href="#">새로나온책</a></li>
+                        <li><a href="#">영미도서 이벤트</a></li>
+                        <li><a href="#">영미잡지정기구독</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">eBook</a>
+                <div class="sub">
+                    <ul>
+                        <li><a href="#">베스트</a></li>
+                        <li><a href="#">신간</a></li>
+                        <li><a href="#">추천</a></li>
+                        <li><a href="#">무료</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">중고장터</a>
+                <div class="sub">
+                    <ul>
+                        <li><a href="#">판매자페이지</a></li>
+                        <li><a href="#">중고책구매방법</a></li>
+                        <li><a href="#">구매상품배송조회</a></li>
+                        <li><a href="#">스마트비교서비스</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

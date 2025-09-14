@@ -1,0 +1,235 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
+body,
+header,
+section,
+h1,
+button,
+div,
+img,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+body {
+  overflow: hidden;
+  font-family: "Jua", sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+section {
+  width: 100%;
+  height: 100%;
+}
+.end {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: url("../img/bg.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  padding-top: 50px;
+}
+.end > h2 {
+  text-align: center;
+  font-size: 46px;
+}
+.end > .end_img {
+  margin: 0 auto;
+  width: 300px;
+  height: 250px;
+  padding-right: 15%;
+  animation-name: end_img;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+}
+@keyframes end_img {
+  0% {
+    padding-right: 16%;
+  }
+  50% {
+    padding-right: 24%;
+  }
+  100% {
+    padding-right: 16%;
+  }
+}
+::before {
+  /* content: "SCORE : "; */
+}
+.end > .score {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 40px;
+  text-indent: -30px;
+}
+
+.end_btns {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+  display: flex;
+  justify-content: space-around;
+}
+.end_btns > button {
+  width: 40%;
+  background: #fff;
+  /* display: inline-block; */
+  height: 40px;
+  border: 0;
+  box-sizing: border-box;
+  border-radius: 25px;
+  font-family: "Jua", sans-serif;
+  font-size: 18px;
+}
+.go_area {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+.go_area > .go_start {
+  margin: 0 6%;
+}
+.go_area > .go_start,
+.go_area > .go_story,
+.go_area > .go_info {
+  width: 40%;
+  background: #fff;
+  display: inline-block;
+  height: 40px;
+  border: 0;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 40px;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background: url("../img/bono3.png") no-repeat 90% bottom;
+  background-size: 50px 42px;
+}
+.jogea_area {
+  width: 40%;
+  height: 50px;
+  padding-left: 45px;
+  background: url("../img/jogea.png") no-repeat left center;
+  background-size: 38px 38px;
+  margin-left: 10px;
+}
+.jogea_area > .gage {
+  width: 100%;
+  height: 50px;
+  padding-top: 15px;
+  position: relative;
+}
+.jogea_area > .gage > .gage_box {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  border: 2px solid #000;
+
+  border-radius: 25px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  /* z-index: 50; */
+}
+.jogea_area > .gage > .gage_box > .gage_bar {
+  width: 0;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffc0cb;
+  z-index: -1;
+}
+.play {
+  width: 100%;
+  height: 100%;
+  background: url("../img/bg.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  padding-top: 50px;
+  /* display: none; */
+}
+.play_area {
+  margin: 0px 10px 0;
+  height: calc(100% - 300px);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  overflow: hidden;
+}
+.box_area {
+  width: 100px;
+  height: 107px;
+  position: relative;
+  overflow: hidden;
+}
+.forest {
+  position: absolute;
+  width: 100px;
+  height: 107px;
+  background: url("../img/hole.png") no-repeat;
+  z-index: 100;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.play_nuburi {
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  width: 125px;
+  height: 168px;
+}
+.play_score {
+  position: absolute;
+  bottom: 80px;
+  right: 15px;
+  width: 200px;
+  height: 25px;
+  text-align: center;
+  padding-right: 20px;
+}
+.play_score::before {
+  content: "SCORE :";
+}
+.time {
+  position: absolute;
+  bottom: 50px;
+  right: 15px;
+  width: 200px;
+  height: 25px;
+  background: #64c7f3;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 25px;
+  line-height: 25px;
+}
+.box_area > div:nth-child(2) > img {
+  position: relative;
+  bottom: -80px;
+  width: 100px;
+  height: 82px;
+  /* background: url("img/faker2.png") no-repeat center center; */
+  /* background-size: 100px 82px; */
+  z-index: 1;
+  transition: all 0.2s;
+}
+.box_area > div:nth-child(2) > img.active {
+  bottom: -10px;
+  height: 82px;
+}

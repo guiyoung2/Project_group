@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 ,minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <title>BEHIVE</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="main_style.css" />
+  </head>
+  <body>
+    <header id="main_header">
+      <div class="header_top">
+        <h2><a href="#">B E H I V E</a></h2>
+        <div class="tnb">
+          <ul class="login_area">
+            <li class="login"><a href="sub/login.html">Login</a></li>
+            <li class="my_page"><a href="sub/mypage.html">My page</a></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="gnb">
+        <ul>
+          <li class="menu">
+            <a href="#">Our Shop</a>
+            <div class="sub">
+              <ul>
+                <li><a href="our_shop/shop_behive.html">B E H I V E</a></li>
+                <li><a href="our_shop/shop_ncnt.html">N˚CONNECT</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="brand/brand.html">Brand</a></li>
+          <li><a href="store/store.html">Store</a></li>
+          <li><a href="notice/notice.html">Notice</a></li>
+          <li><a href="qa/Q&A.html">Q&A</a></li>
+          <li><a href="ship/ship.html">Ship</a></li>
+        </ul>
+      </nav>
+      <div class="m_btn"></div>
+      <div class="m_bg"></div>
+      <nav class="m_menu_area">
+        <div class="m_menu">
+          <ul class="m_tnb">
+            <li><a href="./sub/login.html">Login</a></li>
+            <li><a href="./sub/mypage.html">My page</a></li>
+          </ul>
+          <ul class="m_gnb">
+            <li>
+              <a href="javascript:;">Our Shop</a>
+              <div class="m_sub">
+                <ul>
+                  <li><a href="./our_shop/shop_behive.html">B E H I V E</a></li>
+                  <li><a href="./our_shop/shop_ncnt.html">N˚CONNECT</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="./brand/brand.html">Brand</a></li>
+            <li><a href="./store/store.html">Store</a></li>
+            <li><a href="./notice/notice.html">Notice</a></li>
+            <li><a href="./qa/Q&A.html">Q&A</a></li>
+            <li><a href="./ship/ship.html">Ship</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="main_top">
+      <h2 class="img_title">Shop View</h2>
+      <div class="img_wrap">
+        <div class="img_box1">
+          <div class="main_img1"></div>
+        </div>
+        <div class="img_box2">
+          <div class="main_img2"></div>
+        </div>
+        <div class="img_box3">
+          <div class="main_img3"></div>
+        </div>
+        <div class="img_box4">
+          <div class="main_img4"></div>
+        </div>
+      </div>
+    </section>
+    <section class="brand_list">
+      <div class="main_brand_info">
+        <div class="newest">
+          <h3>The Newest <span class="br">Brand</span></h3>
+          <ul class="newest_brand">
+            <li>Deho</li>
+            <li>Satur</li>
+            <li>Insilence_women</li>
+            <li>Wildbricks</li>
+          </ul>
+        </div>
+        <div class="best">
+          <h3>Best Brand</h3>
+          <ul class="best_brand">
+            <li>Insilence</li>
+            <li>After pray</li>
+            <li>Satur</li>
+            <li>Beslow</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="main_bt">
+      <h3>Instagram New Post</h3>
+      <p>@nconnect_behive</p>
+    </section>
+    <section class="insta">
+      <div id="instagram_feed"></div>
+    </section>
+    <div class="click_box">
+      <div class="click">more feed ↓</div>
+    </div>
+    <footer id="main_footer">
+      <h2><img src="image/footer_logo.png" alt="footer_logo" /></h2>
+      <address>
+        <div class="ft_info1">
+          <p>N˚CONNECT & BEHIVE</p>
+          <p>CONTACT E-MAIL - ncproduct@naver.com</p>
+        </div>
+        <div class="ft_info2">
+          <div class="info2_l">
+            <p>BEHIVE - 070.4231.3774</p>
+            <p>경기도 안산시 단원구 고잔로102 대지스타타워1층</p>
+          </div>
+          <!-- </div> -->
+          <!-- <div class="ft_info3"> -->
+          <div class="info2_r">
+            <p>N˚CONNECT - 031.414.3770</p>
+            <p>경기도 안산시 단원구 고잔동 539-2번지 대동조이월드3층 306호</p>
+          </div>
+        </div>
+      </address>
+      <div class="sns_area"><a href="#">nconnect_behive</a></div>
+      <!-- before:: 사용하여 인스타 로고 넣기 -->
+    </footer>
+    <script type="text/javascript" src="./js/instafeed.min.js"></script>
+    <script type="text/javascript">
+      let n = 5;
+      let ev = document.querySelector(".click");
+      ev.addEventListener("click", function () {
+        n += 5;
+        console.log(n);
+        feed.run();
+      });
+
+      const feed = new Instafeed({
+        accessToken:
+          "IGQVJYZAmdIemc2ZAFB5OU1iM0FPU2M3MVRvRWdQeDdVU3hvUmxHdmZAjTjlDdlVlZA1Q4Ym1TY0M1b0c0N3cxSHNMRE55ZA1BPUkg5OWRqRmZAiNE1jYWp4bWZAtOThjN3pidmVVX0U2bHJR",
+        target: "instagram_feed",
+        template:
+          '<li class="item">' +
+          '<a href="{{link}}">' +
+          '<img title="{{caption}}" src="{{image}}"/>' +
+          //   "<h3>{{caption}}</h3>" +
+          //   "<div>{{username}}</div>" +
+          "</a>" +
+          "</li>",
+        limit: n,
+      });
+
+      feed.run();
+    </script>
+  </body>
+</html>
