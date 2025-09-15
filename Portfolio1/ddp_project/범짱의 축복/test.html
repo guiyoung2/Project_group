@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clicka {
+            display: block;
+            width: 150px;
+            height: 50px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            line-height: 50px;
+            text-align: center;
+            margin: 150px auto;
+        }
+
+        .joybox {
+            width: 150px;
+            height: 50px;
+            background: deeppink;
+            color: dodgerblue;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 50PX;
+            position: absolute;
+            left: 50%;
+            top: 300px;
+            transform: translate(-50%);
+            display: none;
+            
+        }
+
+        .joybox::after {
+            content: "Love Joy♥";
+            color: #fff;
+            width: 14px;
+            animation: bounce 0.4s linear 0s infinite;
+        }
+
+        @keyframes bounce {
+            30% {
+                font-size: 14px;
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="clicka">클릭하시오</a>
+    <div class="joybox"></div>
+    <script src="./js/tete.js"></script>
+</body>
+</html>
