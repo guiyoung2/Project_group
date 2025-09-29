@@ -1,6 +1,0 @@
-{
-  "name": "Todo-list",
-  "version": "yarn init --force",
-  "main": "index.js",
-  "license": "MIT"
-}
