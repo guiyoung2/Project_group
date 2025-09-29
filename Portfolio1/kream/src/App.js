@@ -20,19 +20,19 @@ function App() {
         <Container className="justify-content-end tnb">
           <Nav activeKey="/home">
             <Nav.Item>
-              <Nav.Link href="/Kream/login">고객센터</Nav.Link>
+              <Nav.Link href="/login">고객센터</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/Kream/login">관심상품</Nav.Link>
+              <Nav.Link href="/login">관심상품</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/Kream/login">로그인</Nav.Link>
+              <Nav.Link href="/login">로그인</Nav.Link>
             </Nav.Item>
           </Nav>
         </Container>
 
         <Container className="header-top">
-          <Navbar.Brand href="/Kream" className="logo">
+          <Navbar.Brand href="/" className="logo">
             <img src={`${process.env.PUBLIC_URL}/img/logo.png`} alt="logo" />
           </Navbar.Brand>
 
@@ -42,31 +42,27 @@ function App() {
             className="header-tab"
           >
             <Nav.Item>
-              <Nav.Link href="/Kream" eventKey="/">
+              <Nav.Link href="/" eventKey="/">
                 HOME
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/Kream/service-style" eventKey="/service-style">
+              <Nav.Link href="//service-style" eventKey="/service-style">
                 STYLE
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/Kream/service-shop" eventKey="/service-shop">
+              <Nav.Link href="//service-shop" eventKey="/service-shop">
                 SHOP
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/Kream/login" eventKey="my">
+              <Nav.Link href="//login" eventKey="my">
                 MY
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link
-                href="/Kream/service"
-                eventKey="search"
-                className="search"
-              >
+              <Nav.Link href="//service" eventKey="search" className="search">
                 SEARCH
               </Nav.Link>
             </Nav.Item>
@@ -75,32 +71,32 @@ function App() {
         <Container className="cate">
           <Nav variant="tabs" activeKey={location.pathname}>
             <Nav.Item>
-              <Nav.Link href="/Kream/dessert" eventKey="/dessert">
+              <Nav.Link href="//dessert" eventKey="/dessert">
                 <span className="music-txt">디저트 선물</span>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/Kream" eventKey="/">
+              <Nav.Link href="/" eventKey="/">
                 추천
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/Kream/?p=/man" eventKey="/man">
+              <Nav.Link href="//?p=/man" eventKey="/man">
                 남성
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/Kream/woman" eventKey="/woman">
+              <Nav.Link href="//woman" eventKey="/woman">
                 여성
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/Kream/brand" eventKey="/brand">
+              <Nav.Link href="//brand" eventKey="/brand">
                 브랜드
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/Kream/planning" eventKey="/planning">
+              <Nav.Link href="//planning" eventKey="/planning">
                 기획전
               </Nav.Link>
             </Nav.Item>
