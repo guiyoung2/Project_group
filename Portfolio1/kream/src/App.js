@@ -7,7 +7,13 @@ import { SlideMain, SlideMan, SlideWoman, SlideBrand } from "./SlideData";
 import { MainCate, ManCate, WomanCate, BrandCate } from "./CateboxT";
 import { MainFB, ForMen, ForWomen, ForBrand } from "./CateboxB";
 import { MainItems, ManItems, WomenItems, BrandItems } from "./MainItems";
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import {
+  Route,
+  Routes,
+  useLocation,
+  useNavigate,
+  Link,
+} from "react-router-dom";
 import Dessert from "./dessert";
 import Planning from "./Plannung";
 
@@ -20,19 +26,25 @@ function App() {
         <Container className="justify-content-end tnb">
           <Nav activeKey="/home">
             <Nav.Item>
-              <Nav.Link href="/login">고객센터</Nav.Link>
+              <Nav.Link as={Link} to="/login">
+                고객센터
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/login">관심상품</Nav.Link>
+              <Nav.Link as={Link} to="/login">
+                관심상품
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/login">로그인</Nav.Link>
+              <Nav.Link as={Link} to="/login">
+                로그인
+              </Nav.Link>
             </Nav.Item>
           </Nav>
         </Container>
 
         <Container className="header-top">
-          <Navbar.Brand href="/" className="logo">
+          <Navbar.Brand as={Link} to="/" className="logo">
             <img src={`${process.env.PUBLIC_URL}/img/logo.png`} alt="logo" />
           </Navbar.Brand>
 
@@ -42,27 +54,32 @@ function App() {
             className="header-tab"
           >
             <Nav.Item>
-              <Nav.Link href="/" eventKey="/">
+              <Nav.Link as={Link} to="/" eventKey="/">
                 HOME
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="//service-style" eventKey="/service-style">
+              <Nav.Link as={Link} to="/service-style" eventKey="/service-style">
                 STYLE
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="//service-shop" eventKey="/service-shop">
+              <Nav.Link as={Link} to="/service-shop" eventKey="/service-shop">
                 SHOP
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="//login" eventKey="my">
+              <Nav.Link as={Link} to="/login" eventKey="my">
                 MY
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="//service" eventKey="search" className="search">
+              <Nav.Link
+                as={Link}
+                to="/service"
+                eventKey="search"
+                className="search"
+              >
                 SEARCH
               </Nav.Link>
             </Nav.Item>
@@ -71,32 +88,32 @@ function App() {
         <Container className="cate">
           <Nav variant="tabs" activeKey={location.pathname}>
             <Nav.Item>
-              <Nav.Link href="//dessert" eventKey="/dessert">
+              <Nav.Link as={Link} to="/dessert" eventKey="/dessert">
                 <span className="music-txt">디저트 선물</span>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/" eventKey="/">
+              <Nav.Link as={Link} to="/" eventKey="/">
                 추천
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="//?p=/man" eventKey="/man">
+              <Nav.Link as={Link} to="/man" eventKey="/man">
                 남성
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="//woman" eventKey="/woman">
+              <Nav.Link as={Link} to="/woman" eventKey="/woman">
                 여성
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="//brand" eventKey="/brand">
+              <Nav.Link as={Link} to="/brand" eventKey="/brand">
                 브랜드
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="//planning" eventKey="/planning">
+              <Nav.Link as={Link} to="/planning" eventKey="/planning">
                 기획전
               </Nav.Link>
             </Nav.Item>
