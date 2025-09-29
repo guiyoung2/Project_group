@@ -72,8 +72,8 @@ ul {
   display: block;
 }
 .tnb a:hover,
-.nav-link:focus,
-.nav-link:hover {
+.nav-item .nav-link:focus,
+.nav-item .nav-link:hover {
   color: #222;
 }
 .header-top {
